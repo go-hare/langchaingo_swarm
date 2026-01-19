@@ -58,18 +58,26 @@ func CreateStreamingSwarm(config SwarmConfig) (*graph.StreamingStateGraph[SwarmS
 		agentCopy := agent
 
 		nodeFunc := func(ctx context.Context, state SwarmState) (SwarmState, error) {
+			fmt.Printf("🎯 Swarm node executing: %s\n", agentCopy.Name)
+
 			// Invoke the agent's runnable
 			if invoker, ok := agentCopy.Runnable.(interface {
 				Invoke(context.Context, SwarmState) (any, error)
 			}); ok {
+				fmt.Printf("✅ Found Invoke interface for: %s\n", agentCopy.Name)
 				result, err := invoker.Invoke(ctx, state)
 				if err != nil {
+					fmt.Printf("❌ Invoke error: %v\n", err)
 					return state, err
 				}
 
 				if resultState, ok := result.(SwarmState); ok {
+					fmt.Printf("✅ Got result state with %d messages\n", len(resultState.Messages))
 					return resultState, nil
 				}
+				fmt.Printf("⚠️ Result is not SwarmState: %T\n", result)
+			} else {
+				fmt.Printf("❌ Runnable does not have Invoke: %T\n", agentCopy.Runnable)
 			}
 
 			return state, nil
