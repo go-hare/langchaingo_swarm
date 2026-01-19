@@ -23,7 +23,7 @@ go mod init my-swarm-project
 ### Step 2: Install LangGraphGo Swarm
 
 ```bash
-go get github.com/yourusername/langgraphgo-swarm
+go get github.com/yourusername/langgraphgo_swarm
 go get github.com/smallnest/langgraphgo
 go get github.com/tmc/langchaingo
 ```
@@ -49,7 +49,7 @@ import (
 	"github.com/smallnest/langgraphgo/graph"
 	"github.com/tmc/langchaingo/llms"
 	"github.com/tmc/langchaingo/llms/openai"
-	"github.com/yourusername/langgraphgo-swarm/swarm"
+	"github.com/yourusername/langgraphgo_swarm/swarm"
 )
 
 func main() {
@@ -172,7 +172,7 @@ Let's break down what we just did:
 import (
     "github.com/smallnest/langgraphgo/graph"     // Graph building
     "github.com/tmc/langchaingo/llms/openai"     // LLM integration
-    "github.com/yourusername/langgraphgo-swarm/swarm" // Swarm functionality
+    "github.com/yourusername/langgraphgo_swarm/swarm" // Swarm functionality
 )
 ```
 
@@ -338,7 +338,7 @@ Now that you have a basic swarm running:
 
 ## 📞 Getting Help
 
-- **Issues**: [GitHub Issues](https://github.com/yourusername/langgraphgo-swarm/issues)
+- **Issues**: [GitHub Issues](https://github.com/yourusername/langgraphgo_swarm/issues)
 - **Examples**: Check the `examples/` directory
 - **Documentation**: Read the full README.md
 - **Community**: Join discussions on GitHub

@@ -19,7 +19,7 @@ Built on top of [LangGraphGo](https://github.com/smallnest/langgraphgo), featuri
 ## 📦 Installation
 
 ```bash
-go get github.com/go-hare/langgraphgo-swarm
+go get github.com/go-hare/langgraphgo_swarm
 ```
 
 ## 🚀 Quick Start
@@ -35,7 +35,7 @@ import (
     "github.com/smallnest/langgraphgo/graph"
     "github.com/tmc/langchaingo/llms"
     "github.com/tmc/langchaingo/llms/openai"
-    "github.com/go-hare/langgraphgo-swarm/swarm"
+    "github.com/go-hare/langgraphgo_swarm/swarm"
 )
 
 func main() {
@@ -421,4 +421,4 @@ MIT License - see LICENSE file for details.
 
 ## 🐛 Issues
 
-If you encounter any issues or have questions, please file an issue on the [GitHub issue tracker](https://github.com/go-hare/langgraphgo-swarm/issues).
+If you encounter any issues or have questions, please file an issue on the [GitHub issue tracker](https://github.com/go-hare/langgraphgo_swarm/issues).

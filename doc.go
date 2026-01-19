@@ -1,4 +1,4 @@
-// Package langgraphgo-swarm provides a multi-agent swarm system implementation for Go.
+// Package langgraphgo_swarm provides a multi-agent swarm system implementation for Go.
 //
 // LangGraphGo Swarm is a Go port of the Python LangGraph Swarm library, enabling
 // creation of swarm-style multi-agent systems where agents dynamically hand off
@@ -16,7 +16,7 @@
 //	    "context"
 //	    "github.com/smallnest/langgraphgo/graph"
 //	    "github.com/tmc/langchaingo/llms/openai"
-//	    "github.com/yourusername/langgraphgo-swarm/swarm"
+//	    "github.com/yourusername/langgraphgo_swarm/swarm"
 //	)
 //
 //	func main() {
@@ -98,7 +98,7 @@
 // # More Information
 //
 // For more details, see:
-// - GitHub: https://github.com/yourusername/langgraphgo-swarm
+// - GitHub: https://github.com/yourusername/langgraphgo_swarm
 // - LangGraphGo: https://github.com/smallnest/langgraphgo
 // - Documentation: https://lango.rpcx.io
 package main

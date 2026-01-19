@@ -1,4 +1,4 @@
-module github.com/go-hare/langgraphgo-swarm
+module github.com/go-hare/langgraphgo_swarm
 
 go 1.25.0
 

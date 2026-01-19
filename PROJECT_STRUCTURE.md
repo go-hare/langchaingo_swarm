@@ -5,7 +5,7 @@ This document describes the organization of the LangGraphGo Swarm project.
 ## Directory Layout
 
 ```
-langgraphgo-swarm/
+langgraphgo_swarm/
 ├── swarm/                      # Core swarm implementation
 │   ├── swarm.go               # Swarm creation and routing logic
 │   ├── swarm_test.go          # Tests for swarm functionality

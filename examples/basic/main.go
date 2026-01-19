@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/go-hare/langgraphgo-swarm/swarm"
+	"github.com/go-hare/langgraphgo_swarm/swarm"
 	"github.com/smallnest/langgraphgo/graph"
 	"github.com/tmc/langchaingo/llms"
 	"github.com/tmc/langchaingo/llms/openai"

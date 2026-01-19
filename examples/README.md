@@ -75,7 +75,7 @@ import (
     "context"
     "github.com/smallnest/langgraphgo/graph"
     "github.com/tmc/langchaingo/llms/openai"
-    "github.com/yourusername/langgraphgo-swarm/swarm"
+    "github.com/yourusername/langgraphgo_swarm/swarm"
 )
 
 func main() {

@@ -1,7 +1,7 @@
 .PHONY: test build clean install lint fmt help
 
 # Variables
-BINARY_NAME=langgraphgo-swarm
+BINARY_NAME=langgraphgo_swarm
 GO=go
 GOTEST=$(GO) test
 GOBUILD=$(GO) build
