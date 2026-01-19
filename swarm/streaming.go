@@ -58,7 +58,14 @@ func CreateStreamingSwarm(config SwarmConfig) (*graph.StreamingStateGraph[SwarmS
 		agentCopy := agent
 
 		nodeFunc := func(ctx context.Context, state SwarmState) (SwarmState, error) {
-			// Invoke the agent's runnable
+			// Try typed Invoke first (returns SwarmState directly)
+			if invoker, ok := agentCopy.Runnable.(interface {
+				Invoke(context.Context, SwarmState) (SwarmState, error)
+			}); ok {
+				return invoker.Invoke(ctx, state)
+			}
+
+			// Fallback to any return type
 			if invoker, ok := agentCopy.Runnable.(interface {
 				Invoke(context.Context, SwarmState) (any, error)
 			}); ok {
@@ -66,7 +73,6 @@ func CreateStreamingSwarm(config SwarmConfig) (*graph.StreamingStateGraph[SwarmS
 				if err != nil {
 					return state, err
 				}
-
 				if resultState, ok := result.(SwarmState); ok {
 					return resultState, nil
 				}
